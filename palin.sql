@@ -1,21 +1,21 @@
-declare
+declare 
 n number;
-copy number;
-rev number := 0;
+rev number:=0;
+rem number;
+temp number;
 begin
 n:=&n;
-copy:=n;
-while(copy>0)
-loop
-  rev := rev * 10 + mod(n,10);
-  copy := copy / 10;
-end loop; 
-if (n = rev)
-  then
-    dbms_output.put_line(n||' is palindrome number');
-  else
-    dbms_output.put_line(n||' is not palindrome number');
-  end if; 
+temp:=n;
+while n>0 loop
+ rem:=mod(n,10);
+ rev:= rev*10+rem;
+ n :=floor(n / 10);
+end loop;
+if rev=temp
+then
+dbms_output.put_line(temp||' is a palindrome');
+else
+dbms_output.put_line(temp||' not a palindrome');
+end if;
 end;
 /
-
