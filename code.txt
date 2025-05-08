@@ -1,0 +1,15 @@
+SQL> create table details(c_id varchar(10),c_name varchar(25), salary int);
+
+Table created.
+
+SQL> insert into details values(01,'sujith',25000);
+
+insert into details values(02,'shirna',30000);
+ 
+SQL> insert into details values(03,'sruthy',32000);
+
+SQL> insert into details values(04,'arya',35000);
+
+SQL> insert into details values(05,'devika',28000);
+
+
